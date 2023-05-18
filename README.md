@@ -4,7 +4,7 @@
     </a>
 </div> 
 
-# Spring Boot application starter exporting metrics for Prometheus
+# Spring application starter exporting metrics for Prometheus
 
 
 ## Feature tags
@@ -12,7 +12,7 @@
 - actuator
 - maven
 - prometheus
-- spring-boot
+- spring
 - starter
 - swagger
 - template
@@ -21,7 +21,7 @@
 
 ## Direct ancestor
 
-[- prometheus](https://github.com/AlexanderLapygin/spring-boot-actuator#readme)
+[- prometheus](https://github.com/AlexanderLapygin/spring-actuator#readme)
 
 ---
 
@@ -34,7 +34,7 @@
 ## Run
 
 ```sh
-mvnw spring-boot:run
+mvnw spring-???:run
 ```
 
 # Check Swagger
@@ -51,7 +51,7 @@ Take a look at actuator endpoints at http://localhost:8080/actuator/prometheus.
 
 # Setting up and running Prometheus
 
-To set up Prometheus for monitoring your Spring Boot application, follow these steps:
+To set up Prometheus for monitoring your Spring application, follow these steps:
 
 1. Download the [latest release](https://prometheus.io/download/) of Prometheus for your operating system.
 2. Extract the files from the archive.
@@ -63,7 +63,7 @@ To set up Prometheus for monitoring your Spring Boot application, follow these s
   static_configs:
     - targets: ['localhost:8080']
 ```
-This configuration tells Prometheus to scrape metrics from the `/actuator/prometheus` endpoint of your Spring Boot application running on `localhost:8080`.
+This configuration tells Prometheus to scrape metrics from the `/actuator/prometheus` endpoint of your Spring application running on `localhost:8080`.
 5. Save the `prometheus.yml` file and start Prometheus locally by running the `prometheus` executable:
 ```shell
 prometheus --config.file=prometheus.yml
@@ -76,11 +76,11 @@ http_server_requests_seconds_bucket{uri="/hello"}
 8. Select "Graph" from the top menu.
 9. Click the "Execute" button.
 
-That's it! Now you have Prometheus set up to monitor your Spring Boot application and collect metrics.
+That's it! Now you have Prometheus set up to monitor your Spring application and collect metrics.
 
 # Setting up and running Grafana locally
 
-To set up Grafana for monitoring your Spring Boot application, follow these steps:
+To set up Grafana for monitoring your Spring application, follow these steps:
 
 1. Download the [latest release](https://grafana.com/grafana/download) of Grafana for your operating system.
 2. Run the installer and follow the instructions on the screen. Select the installation path and other settings as needed.
